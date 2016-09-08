@@ -1,0 +1,36 @@
+---
+title: "Homework 1"
+author: "Heejong Bong"
+date: "2016³â 9¿ù 8ÀÏ"
+output: html_document
+---
+
+# Linear Regression
+
+Linear regression analysis is conducted on airquality data.
+
+## Code
+
+Code for linear regression is as following.
+
+First code inputs the airquality data.
+```{r inputdata}
+library(datasets)
+Ozone = airquality$Ozone
+Wind = airquality$Wind
+```
+
+Second code conducts a linear regression analysis; the regression model is as following:
+  Ozone ~ Wind
+```{r linreg}
+fit <- lm(Ozone~Wind)
+fit
+```
+
+## Including Plots
+
+Here are plots for the linear regression model.
+
+```{r pressure, echo=FALSE}
+plot(fit)
+```
